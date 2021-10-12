@@ -1,3 +1,12 @@
 html {
   scroll-behavior: smooth;
 }
+
+body::-webkit-scrollbar {
+  width: .8em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(153, 149, 149);
+  outline: 1px solid rgb(153, 149, 149);
+}

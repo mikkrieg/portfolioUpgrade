@@ -12,7 +12,7 @@ const Navigation = () => {
       <Container>
         <Navbar.Brand className='brand mt-3' href='/'><img src={img} alt='stingray icon'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Nav className='align-content-end mt-3'>
+          <Nav className='align-content-end mt-3' variant='dark'>
             <Nav.Link href='/'>Home</Nav.Link>
             <Nav.Link href='/about'>About</Nav.Link>
             <Nav.Link>Get in Touch!</Nav.Link>
