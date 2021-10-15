@@ -1,14 +1,25 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import {Button} from './Button';
+import Button from 'react-bootstrap/button';
+import { AppContext } from '../AppContext';
 import '../sass/components/navbar.scss';
 import img from './../img/icons8-stingray-50.png';
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const [modal, setModal] = useState(false);
 
-  const handleClick = () => setClick(!click);
+  const handleClick = () => {
+    setClick(!click);
+    if(click === false) {
+      console.log('inside')
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }
+  
   const closeMobileMenu = () => setClick(false);
   const showButton = () => {
     if(window.innerWidth <= 960) {
@@ -16,6 +27,9 @@ function Navbar() {
     } else {
       setButton(true);
     }
+  }
+  const openModal = () => {
+    return "Hekllo"
   }
 
   window.addEventListener('resize', showButton);
@@ -25,7 +39,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo'>
-            TRVL <i className='fab fa-typo3' />
+            <img src={img} alt='stingray icon'/>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -36,23 +50,15 @@ function Navbar() {
                 Home
               </Link>
             </li>
-            <li className='nav-item'>
-              <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
-                Services
+            <li className='nav-item by-btn'>
+              <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
+                About
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
-                Products
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
-                Sign Up
-              </Link>
+              <Button className='modal-btn'variant='outline-light' onClick={openModal} >Get in Touch!</Button>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
         </div>
       </nav>
     </>
