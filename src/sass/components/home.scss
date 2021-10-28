@@ -1,67 +1,23 @@
 
-  h1, h5, h4{
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 4em;
-    padding-top: 12%;
-  }
-  
-  h4 {
-    width: 20%;
-    margin: auto;
-    padding-top: 3%;
-  }
-
-  .first-block {
-    margin-top: 200px;
-    height: 500px;
-    background-color: #1C1B1B;
-  }
-  .home-div {
-    margin-top: 20vh;
-  }
-
-  .scroll-arrow {
-    margin-bottom: -40vh;
-    animation: floating 0.7s ease;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(.54,.24,.65,.95);
-    animation-direction: alternate;
-  }
-
-  .desktop-p {
-    display: none;
-  }
-
-  @keyframes floating {
-    0% {margin-bottom: -38vh;}
-    25% {margin-bottom: -38.5vh;}
-    50% {margin-bottom: -39vh;}
-    75% {margin-bottom: -39.5vh}
-    100% {margin-bottom: -40vh;}
-  }
-
-
-@media screen and (min-width: 960px) {
-  h1 {
-    padding-top: 3%;
-  }
-  .learn {
-    width: 50%;
-    margin: auto;
-  }
-  
-  .first-block {
-    margin-top: 400px;
-    height: 1000px;
-  }
-  .desktop-p {
-    display: block;
-  }
-  .scroll-arrow {
-    display: none;
-  }
+.scroll-arrow {
+animation: floating 1s ease;
+animation-iteration-count: infinite;
+animation-timing-function: cubic-bezier(.54,.24,.65,.95);
+animation-direction: alternate;
 }
+
+.hide-arrow {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.3s, opacity 0.3s linear;
+}
+
+@keyframes floating {
+  0% {margin-bottom: -8vh;}
+  25% {margin-bottom: -6vh;}
+  50% {margin-bottom: -4vh;}
+  75% {margin-bottom: -6vh}
+  100% {margin-bottom: -8vh;}
+}
+
 
