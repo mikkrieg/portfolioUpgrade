@@ -1,9 +1,16 @@
 
-.scroll-arrow {
+#scroll-arrow {
 animation: floating 1s ease;
 animation-iteration-count: infinite;
 animation-timing-function: cubic-bezier(.54,.24,.65,.95);
 animation-direction: alternate;
+}
+
+.reveal-arrow {
+  // animation: reveal 1s ease;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s linear;
 }
 
 .hide-arrow {
@@ -19,5 +26,13 @@ animation-direction: alternate;
   75% {margin-bottom: -6vh}
   100% {margin-bottom: -8vh;}
 }
+
+// @keyframes reveal {
+//   0% {opacity: 0}
+//   25% {opacity: 25}
+//   50% {opacity: 50}
+//   75% {opacity: 75}
+//   100% {opacity: 100}
+// }
 
 

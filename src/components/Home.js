@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { makeStyles} from '@mui/styles';
 import '../sass/components/home.scss';
 import JS from './../img/icons8-javascript-50.png'; 
 import C from './../img/icons8-c-sharp-logo-50.png';
@@ -13,31 +13,40 @@ import Redux from './../img/icons8-redux-50.png';
 // import Templix from './projects/Templix';
 import img from './../img/icons8-down-arrow-64.png';
 
-const theme = createTheme({
-  palette: {
-    outlinedButtons : {
-      main: '#000',
-      constrastText: '#fff'
+const useStyles = makeStyles(theme => ({
+  homeButton: {
+    color: '#000',
+    border: 'solid 1px #000 !important',
+    '&:hover': {
+      cursor: 'pointer',
+      color: '#000',  
+      backgroundColor: 'red',
     }
-  }
-  
-})
+  },
+}));
 
 const Home = () => {
   const [hideArrow, setHideArrow] = useState(false);
 
-  const removeArrow = () => {
-    if(window.scrollY > 100) {
-      setHideArrow(true);
-    }
-  }
+  const classes = useStyles();
 
+  const removeArrow = () => {
+    console.log(window.scrollY)
+    if(window.scrollY > 70) {
+      setHideArrow(true);
+    } else {
+      setHideArrow(false);
+    }
+  } 
+
+  
+  
   window.addEventListener('scroll', removeArrow);
   return(
     <>
       <Container maxWidth='sm'>
         <Grid container>
-          <Grid item xs={12} mt={15}>
+          <Grid item xs={12} sx={{ marginTop: {xs: 15, md: 8, xl: 25} }}>
             <Typography variant='h2' align='center'>
               Michael Kriegel
             </Typography>
@@ -47,24 +56,38 @@ const Home = () => {
               Full Stack Developer
             </Typography>
           </Grid>
-          <Grid item xs={8} md={12} sx={{ marginLeft: 9 }}>
+          <Grid item xs={8} md={12} sx={{ marginLeft: {xs: 9, sm:22, md: 23, xl: 22}}}>
             <img src={JS} alt='JavaScript icon'/>
             <img src={C} alt='C sharp icon'/>
             <img src={R} alt='React icon'/>
             <img src={Redux} alt='Redux icon'/>
           </Grid>
           <Grid item>
-            <Typography variant='h4' align='center' sx={{ display: {xs: 'none', sm: 'none', md: 'block'}}}>
+            <Typography 
+              variant='p' 
+              align='center' 
+              sx={{ 
+                display: {xs: 'none', sm: 'none', md: 'block'}, 
+                fontSize: 25, 
+                marginTop: 2,
+                marginBottom: 1,
+                }}>
               Scroll down to check out my projects or click here to learn more about me!
             </Typography>
           </Grid>
           <Grid item xs={12} align='center' mt={2}>
-            <ThemeProvider theme={theme}>
-              <Button component={Link} color='outlinedButtons' to='/about' variant='outlined' sx={{ color: '#000'}}>Learn More!</Button>
-            </ThemeProvider>
+              <Button 
+                className={classes.homeButton}
+                component={Link}  
+                to='/about' 
+                variant='outlined'
+                size='large' 
+                sx={{ color: '#000'}}>
+                  Learn More!
+              </Button>
           </Grid>
           <Grid item xs={1} mt={10}>
-            <img src={img} alt='down arrow' className={hideArrow ? 'hide-arrow' : 'scroll-arrow'}/>
+            <img src={img} alt='down arrow' id='scroll-arrow' className={hideArrow ? 'hide-arrow' : 'reveal-arrow'}/>
           </Grid>
         </Grid>
         <Grid item xs={12}>
