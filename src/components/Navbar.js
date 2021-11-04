@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {Link} from 'react-router-dom';
 import Button from 'react-bootstrap/button';
 import { AppContext } from '../AppContext';
@@ -18,6 +18,10 @@ function Navbar() {
     } else {
       document.body.classList.remove('no-scroll');
     }
+  }
+
+  const returnScroll = () => {
+    document.body.classList.remove('no-scroll');
   }
   
   const closeMobileMenu = () => setClick(false);
@@ -46,12 +50,12 @@ function Navbar() {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/' className='nav-links' onClick={function(e){closeMobileMenu(); returnScroll();}}>
                 Home
               </Link>
             </li>
             <li className='nav-item by-btn'>
-              <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/about' className='nav-links' onClick={function(e){closeMobileMenu(); returnScroll();}}>
                 About
               </Link>
             </li>

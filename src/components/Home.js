@@ -31,7 +31,6 @@ const Home = () => {
   const classes = useStyles();
 
   const removeArrow = () => {
-    console.log(window.scrollY)
     if(window.scrollY > 70) {
       setHideArrow(true);
     } else {
@@ -39,14 +38,18 @@ const Home = () => {
     }
   } 
 
-  
-  
   window.addEventListener('scroll', removeArrow);
+
   return(
     <>
       <Container maxWidth='sm'>
-        <Grid container>
-          <Grid item xs={12} sx={{ marginTop: {xs: 15, md: 8, xl: 25} }}>
+        <Grid 
+        container
+        alignItems='center'
+        justifyContent='center'
+        direction='column'
+        >
+          <Grid item xs={12} sx={{ marginTop: {xs: 11, md: 12, xl: 25} }}>
             <Typography variant='h2' align='center'>
               Michael Kriegel
             </Typography>
@@ -56,7 +59,7 @@ const Home = () => {
               Full Stack Developer
             </Typography>
           </Grid>
-          <Grid item xs={8} md={12} sx={{ marginLeft: {xs: 9, sm:22, md: 23, xl: 22}}}>
+          <Grid item xs={8} md={12}>
             <img src={JS} alt='JavaScript icon'/>
             <img src={C} alt='C sharp icon'/>
             <img src={R} alt='React icon'/>
@@ -86,11 +89,9 @@ const Home = () => {
                   Learn More!
               </Button>
           </Grid>
-          <Grid item xs={1} mt={10}>
-            <img src={img} alt='down arrow' id='scroll-arrow' className={hideArrow ? 'hide-arrow' : 'reveal-arrow'}/>
-          </Grid>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={1} mt={5} sx={{ display: { md: 'none'}}}>
+            <img src={img} alt='down arrow' id='scroll-arrow' className={hideArrow ? 'hide-arrow' : 'reveal-arrow'}/>
         </Grid>
       </Container>
     </>
