@@ -23,7 +23,7 @@ const About = () => {
         md={6} 
         sx={{
           width: '100%',
-          marginTop: {xs: 5}
+          marginTop: {xs: 5, md: 10}
         }}
         >
           <img 
@@ -80,7 +80,7 @@ const About = () => {
           </Divider>
           <Typography
           variant='body1'
-          mb={5}
+          mb={3}
           sx={{
             textAlign: { xs: 'center', md: 'left'},
             fontSize: 18
