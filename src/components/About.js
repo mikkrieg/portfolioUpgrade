@@ -53,9 +53,9 @@ const About = () => {
           className='dividers'
           sx={{
             margin: 'auto',
-            marginTop: 1,
-            marginBottom: 1,
-            width: {xs: '50%', md: '70%'}
+            marginTop: 2,
+            marginBottom: 2,
+            width: {xs: '50%', md: '30%'},
           }}
           >
           </Divider> 
@@ -73,8 +73,8 @@ const About = () => {
           sx={{
             margin: 'auto',
             marginTop: 1,
-            marginBottom: 1,
-            width: {xs: '50%', md: '70%'}
+            marginBottom: 2,
+            width: {xs: '50%', md: '30%'}
           }}
           >
           </Divider>
