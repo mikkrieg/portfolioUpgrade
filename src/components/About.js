@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import Michael from '../img/me.jpeg';
 import '../sass/components/about.scss';
+
 
 const About = () => {
   return(
@@ -35,7 +37,7 @@ const About = () => {
         xs={12} 
         md={6}
         sx={{
-          marginTop: {xs: -3}
+          marginTop: {xs: -3, md: 13}
         }}
         >
           <Typography
@@ -45,9 +47,18 @@ const About = () => {
             fontSize: 18
           }}        
           >
-            Thanks for taking some time to learn more about me! I am an aspiring Software Developer with a focus on Front-End Development. This project is my capstone for Epicodus Coding Bootcamp.
+            Thanks for taking some time to learn more about me! I am an aspiring Software Developer with a focus on Front-End Development. I am currently looking for work and volunteering with <span><a href='https://bitbybitcoding.org/'>Bit by Bit</a></span> an organization located in Portland, OR. Here I am building coding lessons for middle school aged children. 
           </Typography>
-          <br/>    
+          <Divider
+          className='dividers'
+          sx={{
+            margin: 'auto',
+            marginTop: 1,
+            marginBottom: 1,
+            width: {xs: '50%', md: '70%'}
+          }}
+          >
+          </Divider> 
           <Typography
           variant='body1'
           sx={{
@@ -55,9 +66,18 @@ const About = () => {
             fontSize: 18
           }}    
           >
-            I studied at Portland Community College(PCC) for two years. After completing my education at PCC and recieving and Associates of Applied Science in Web Development and Design, I decided to continue my education in software development at Epicodus Coding Bootcamp. Over six months I learned about HTML/CSS, JavaScript, jQuery, C#/.NET, MVC, Entity Framework ORM, Jest testing, React, Redux, Styled Components, Bootstrap, React-Bootstrap, MySQL, Firebase, API's and coding best practices.
+            I studied at Portland Community College(PCC) and completed my Associates of Applied Science in Web Development and Design. I decided to continue my education in software development at Epicodus Coding Bootcamp. Over six months I learned about HTML/CSS, JavaScript, jQuery, C#/.NET, MVC, Entity Framework ORM, Jest testing, React, Redux, CSS frameworks, MySQL, Firebase, API's and coding best practices such as RESTful development and DRY code.
           </Typography>
-          <br/>
+          <Divider
+          className='dividers'
+          sx={{
+            margin: 'auto',
+            marginTop: 1,
+            marginBottom: 1,
+            width: {xs: '50%', md: '70%'}
+          }}
+          >
+          </Divider>
           <Typography
           variant='body1'
           mb={5}
@@ -66,7 +86,7 @@ const About = () => {
             fontSize: 18
           }}
           >
-          Upon graduating Epicodus, I would like begin a career in Front-End Development. This website was built with React, JSX, CSS, SCSS and React-Bootstrap
+            After graduating Epicodus I worked as a Front-End intern at <span><a href='https://www.grantusfunding.com/'> Grant Us Funding</a>.</span> Here I worked with React and Redux to create a multi-step form that streamlined the process of adding new funding opportunities to their application. 
           </Typography>
         </Grid>
       </Grid>

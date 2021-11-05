@@ -13,14 +13,14 @@ import Redux from './../img/icons8-redux-50.png';
 // import Templix from './projects/Templix';
 import img from './../img/icons8-down-arrow-64.png';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   homeButton: {
     color: '#000',
     border: 'solid 1px #000 !important',
     '&:hover': {
       cursor: 'pointer',
       color: '#000',  
-      backgroundColor: 'red',
+      backgroundColor: 'rgba(0, 0, 0, .08)',
     }
   },
 }));
