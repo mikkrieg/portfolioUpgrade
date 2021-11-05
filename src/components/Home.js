@@ -49,7 +49,11 @@ const Home = () => {
         justifyContent='center'
         direction='column'
         >
-          <Grid item xs={12} sx={{ marginTop: {xs: 11, md: 12, xl: 25} }}>
+          <Grid 
+          item 
+          xs={12} 
+          sx={{ marginTop: {xs: 11, md: 12, xl: 25} }}
+          >
             <Typography variant='h2' align='center'>
               Michael Kriegel
             </Typography>
@@ -90,8 +94,18 @@ const Home = () => {
               </Button>
           </Grid>
         </Grid>
-        <Grid item xs={1} mt={5} sx={{ display: { md: 'none'}}}>
-            <img src={img} alt='down arrow' id='scroll-arrow' className={hideArrow ? 'hide-arrow' : 'reveal-arrow'}/>
+        <Grid 
+        item 
+        xs={1} 
+        mt={5} 
+        sx={{ display: { md: 'none'}}}
+        >
+            <img 
+            src={img} 
+            alt='down arrow' 
+            id='scroll-arrow' 
+            className={hideArrow ? 'hide-arrow' : 'reveal-arrow'}
+            />
         </Grid>
       </Container>
     </>
