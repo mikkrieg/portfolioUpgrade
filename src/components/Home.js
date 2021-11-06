@@ -10,7 +10,7 @@ import JS from './../img/icons8-javascript-50.png';
 import C from './../img/icons8-c-sharp-logo-50.png';
 import R from './../img/icons8-react-native-50.png';
 import Redux from './../img/icons8-redux-50.png';
-// import Templix from './projects/Templix';
+import Projects from './Projects';
 import img from './../img/icons8-down-arrow-64.png';
 
 const useStyles = makeStyles((theme) => ({
@@ -52,7 +52,7 @@ const Home = () => {
           <Grid 
           item 
           xs={12} 
-          sx={{ marginTop: {xs: 11, md: 12, xl: 25} }}
+          sx={{ marginTop: {xs: 11, md: 12, xl: 20} }}
           >
             <Typography variant='h2' align='center'>
               Michael Kriegel
@@ -108,6 +108,7 @@ const Home = () => {
             />
         </Grid>
       </Container>
+      <Projects/>
     </>
   )
 }

@@ -4,6 +4,7 @@ animation: floating 1s ease;
 animation-iteration-count: infinite;
 animation-timing-function: cubic-bezier(.54,.24,.65,.95);
 animation-direction: alternate;
+z-index: -5;
 }
 
 .reveal-arrow {
@@ -19,11 +20,8 @@ animation-direction: alternate;
 }
 
 @keyframes floating {
-  0% {margin-bottom: -8vh;}
-  25% {margin-bottom: -6vh;}
-  50% {margin-bottom: -4vh;}
-  75% {margin-bottom: -6vh}
-  100% {margin-bottom: -8vh;}
+  0% {transform: translateY(0)}
+  100% {transform: translateY(-25px)}
 }
 
 

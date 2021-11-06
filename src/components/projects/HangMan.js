@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import { CardActionArea } from '@mui/material';
 import Grid from '@mui/material/Grid';
-import templix from '../../img/templix.png';
+import hangmanIMG from '../../img/hangman.png';
 
 const useStyles = makeStyles(theme => ({
   cards: {
@@ -16,24 +16,24 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Templix = () => {
+const HangMan = () => {
   const classes = useStyles();
   return (
     <Grid mt={5}>
       <Grid item>
         <Card sx={{ 
           maxWidth: 345,  
-          marginBottom: {xs: 4}
+          marginBottom: {xs: 6}
           }}>
           <CardActionArea 
-          href='https://templix.netlify.app/'
+          href='https://redux-hangman.netlify.app/'
           target='_blank'
           className={classes.cards}
           >
             <CardMedia
               component="img"
-              height="90"
-              image={templix}
+              height="110"
+              image={hangmanIMG}
               alt="templix logo"
             />
             <CardContent>
@@ -42,13 +42,13 @@ const Templix = () => {
               variant="h5" 
               component="div"
               >
-                Templix Capstone
+                Hangman Team Project
               </Typography>
               <Typography 
               variant="body2" 
               color="text.secondary"
               >
-                This is a project I constructed for my Epicodus Capstone project. It is a site that provides splash page templates for users to gain inspiration from or use themselves. Built with React, JSX Bootstrap-React and CSS/SCSS. 
+                This is a application is a slightly modified version of the classic hangman game that I built alongside a team of peers. Fully playable and hosted on Netlify. This project was built with React, Redux, Material UI and custom CSS. 
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -58,4 +58,4 @@ const Templix = () => {
   )
 }
 
-export default Templix;
+export default HangMan;
