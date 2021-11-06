@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from '@mui/styles'
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
@@ -7,6 +7,8 @@ import CardContent from '@mui/material/CardContent';
 import { CardActionArea } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import templix from '../../img/templix.png';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const useStyles = makeStyles(theme => ({
   cards: {
@@ -18,10 +20,17 @@ const useStyles = makeStyles(theme => ({
 
 const Templix = () => {
   const classes = useStyles();
+
+  useEffect(() => { 
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <Grid mt={5}>
       <Grid item>
-        <Card sx={{ 
+        <Card 
+        data-aos='fade-up'
+        sx={{ 
           maxWidth: 345,  
           marginBottom: {xs: 4}
           }}>
