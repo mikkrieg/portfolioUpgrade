@@ -17,20 +17,6 @@ const Footer = () => {
   return(
     <>
     <footer>&copy;2021 Michael Kriegel</footer>
-    <Grid 
-    direction='row'
-    >
-      <Grid item xs={4}>
-        <a href="https://www.linkedin.com/in/michael-kriegel/" rel='noreferrer' target="_blank">
-          <img className={classes.icons} src={linkedin} alt="linkedIn icon"/>
-        </a>
-      </Grid>
-      <Grid item xs={4}> 
-        <a href="https://github.com/mikkrieg?tab=repositories" rel='noreferrer' target="_blank">
-          <img className={classes.icons} src={github} alt="Github icon"/>
-        </a> 
-      </Grid>
-    </Grid>
     </>
   )
 }
