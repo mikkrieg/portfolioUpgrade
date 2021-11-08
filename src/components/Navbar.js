@@ -33,7 +33,9 @@ function Navbar() {
     }
   }
   const openModal = () => {
-    return "Hekllo"
+    if(window.innerWidth <= 960) {
+      window.open('mailto:mikkrieg@gmail.com')
+    }
   }
 
   window.addEventListener('resize', showButton);
@@ -61,6 +63,14 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Button className='modal-btn'variant='outline-light' onClick={openModal} >Get in Touch!</Button>
+            </li>
+            <li className='nav-item'>
+              <a href='https://github.com/mikkrieg'>
+                <i class="fab fa-github-square"></i>
+              </a>
+              <a href='https://www.linkedin.com/in/michael-kriegel/'>
+                <i class="fab fa-linkedin"></i>
+              </a>
             </li>
           </ul>
         </div>
