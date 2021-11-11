@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from '@mui/material/Container';
+import Grid from '@mui/material/Container';
 import Templix from './projects/Templix';
 import HangMan from './projects/HangMan';
 
@@ -12,8 +13,10 @@ const Projects = () => {
       backgroundColor: {xs: 'none'},
       }}
       >
-      <Templix/>
-      <HangMan/>
+      <Grid>
+        <Templix/>
+        <HangMan/>
+      </Grid>
     </Container>
     
   )

@@ -27,8 +27,12 @@ const HangMan = () => {
   }, []);
 
   return (
-    <Grid mt={5}>
-      <Grid item>
+    <Grid mt={2}>
+      <Grid 
+        item
+        sx={{ display: 'flex'}}
+        direction='row'
+      >
         <Card 
         data-aos='fade-up'
         sx={{ 

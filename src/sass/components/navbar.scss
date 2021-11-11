@@ -85,7 +85,7 @@
   margin-right: 10px;
 }
 
-.fab {
+.footer-icon, .menu-icon {
   display: none;
 }
 
@@ -180,6 +180,10 @@
     display: inline-block;
     color: #FFF;
     font-size: 3em;
+  }
+
+  .fas {
+    display: inline-block;
   }
   
   .fa-github-square {

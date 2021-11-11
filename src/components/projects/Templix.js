@@ -26,8 +26,14 @@ const Templix = () => {
   }, []);
 
   return (
-    <Grid mt={5}>
-      <Grid item>
+    <Grid 
+      mt={5}
+      direction='row'
+    >
+      <Grid 
+        item
+        sx={{ display: 'flex'}}
+      >
         <Card 
         data-aos='fade-up'
         sx={{ 

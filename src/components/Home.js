@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
+import { AppContext } from '../AppContext';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
@@ -6,6 +7,7 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import { makeStyles} from '@mui/styles';
 import '../sass/components/home.scss';
+import DesktopModal from './DesktopModal';
 import JS from './../img/icons8-javascript-50.png'; 
 import C from './../img/icons8-c-sharp-logo-50.png';
 import R from './../img/icons8-react-native-50.png';
@@ -27,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
   const [hideArrow, setHideArrow] = useState(false);
+  const { open, setOpen } = useContext(AppContext);
 
   const classes = useStyles();
 
@@ -108,6 +111,7 @@ const Home = () => {
             />
         </Grid>
       </Container>
+      <DesktopModal/>
       <Projects/>
     </>
   )

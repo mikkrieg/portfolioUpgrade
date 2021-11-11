@@ -8,7 +8,7 @@ import img from './../img/icons8-stingray-50.png';
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  const [modal, setModal] = useState(false);
+  const { open, setOpen } = useContext(AppContext);
 
   const handleClick = () => {
     setClick(!click);
@@ -35,6 +35,8 @@ function Navbar() {
   const openModal = () => {
     if(window.innerWidth <= 960) {
       window.open('mailto:mikkrieg@gmail.com')
+    } else {
+      setOpen(true);
     }
   }
 
@@ -66,10 +68,10 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <a href='https://github.com/mikkrieg'>
-                <i class="fab fa-github-square"></i>
+                <i className="fab fa-github-square menu-icon"></i>
               </a>
               <a href='https://www.linkedin.com/in/michael-kriegel/'>
-                <i class="fab fa-linkedin"></i>
+                <i className="fab fa-linkedin menu-icon"></i>
               </a>
             </li>
           </ul>
