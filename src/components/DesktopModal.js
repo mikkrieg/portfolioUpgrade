@@ -22,9 +22,11 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       color: '#1A1A1A'
     }
-
   }
 }));
+
+
+
 
 const DesktopModal = () => {
   const { open, setOpen } = useContext(AppContext);
@@ -32,6 +34,12 @@ const DesktopModal = () => {
   const classes = useStyles();
   
   const handleClose = () => setOpen(false);
+  const hideModal = () => {
+    if(window.innerWidth < 960) {
+      setOpen(false);
+    }
+  }
+  window.onresize = hideModal;
 
   return (
     <Modal
