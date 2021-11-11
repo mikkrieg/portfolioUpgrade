@@ -68,10 +68,10 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <a href='https://github.com/mikkrieg'>
-                <i className="fab fa-github-square menu-icon"></i>
+                <i className="fab fa-github-square menu-icons"></i>
               </a>
               <a href='https://www.linkedin.com/in/michael-kriegel/'>
-                <i className="fab fa-linkedin menu-icon"></i>
+                <i className="fab fa-linkedin menu-icons"></i>
               </a>
             </li>
           </ul>

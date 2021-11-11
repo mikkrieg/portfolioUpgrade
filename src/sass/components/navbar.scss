@@ -85,7 +85,7 @@
   margin-right: 10px;
 }
 
-.footer-icon, .menu-icon {
+.footer-icon, .menu-icons {
   display: none;
 }
 
@@ -176,17 +176,17 @@
     margin-top: 5%;
   }
 
-  .fab {
+  .menu-icons {
     display: inline-block;
     color: #FFF;
     font-size: 3em;
   }
 
-  .fas {
-    display: inline-block;
-  }
-  
   .fa-github-square {
     margin-right: 10%;
+  }
+
+  .modal-icon {
+    display: none;
   }
 }

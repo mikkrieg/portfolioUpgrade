@@ -4,16 +4,25 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import { makeStyles } from '@mui/styles';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography'; 
+import FormControl from '@mui/material/FormControl';
+import Typography from '@mui/material/Typography';
+import InputLabel from '@mui/material/InputLabel'; 
+import Input from '@mui/material/Input';
+import FormHelperText from '@mui/material/FormHelperText';
+import TextField from '@mui/material/TextField';
+import Grid from '@mui/material/Grid';
 import { AppContext } from '../AppContext';
 import '../sass/components/DesktopModal.scss';
 
 const useStyles = makeStyles(theme => ({
   modalIcons: {
     color: '#000',
-    display: 'inline-block',
-    margin: 'auto'
+    width: '10%',
+    fontSize: 120,
+    '&:hover': {
+      color: '#1A1A1A'
+    }
+
   }
 }));
 
@@ -21,18 +30,9 @@ const DesktopModal = () => {
   const { open, setOpen } = useContext(AppContext);
 
   const classes = useStyles();
-
-  let width;
-  let height;
-
-  const modalSize = () => {
-    width = window.innerWidth / 2;
-    height = window.innerHeight / 2;
-  }
-
-  setInterval(modalSize(), 100);
   
   const handleClose = () => setOpen(false);
+
   return (
     <Modal
     aria-labelledby="transition-modal-title"
@@ -51,25 +51,74 @@ const DesktopModal = () => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: {width},
-        height: {height},
         bgcolor: 'background.paper',
         border: '2px solid #000',
         boxShadow: 24,
         p: 4,
       }}>
-        <Typography id="transition-modal-title" variant="h3" component="h2" sx={{ textAlign: 'center' }}>
-          Get In Touch! 
+        <Typography id="transition-modal-title" variant="h2" sx={{ textAlign: 'center', fontWeight: 'bold' }}>
+          Get in Touch
         </Typography>
-        <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-          Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+        <Typography 
+          variant='h6' 
+          sx={{ 
+            textAlign: 'center', 
+            width: '80%', 
+            margin: 'auto'}}
+          >
+          Shoot me an email at mikkrieg@gmail.com or connect with me on these platforms
         </Typography>
-        <a href='https://github.com/mikkrieg' className={classes.modalIcons}>
-            <i className="fab fa-github-square modal-icon" id='foot-git'></i>
-          </a>
-          <a href='https://www.linkedin.com/in/michael-kriegel/' className={classes.modalIcons}>
-            <i className="fab fa-linkedin modal-icon" id='foot-link'></i>
-          </a>
+        <Grid 
+          sx={{ 
+            display: 'flex'
+            }}
+          >
+          <Grid 
+            item 
+            md={4} 
+            sx={{
+              marginLeft: {
+                sm: '2%', 
+                md:'5%', 
+                lg:'8%', 
+                xl: '10%'
+                }}}
+            >
+            <a href='mailto:mikkrieg@gmail.com' className={classes.modalIcons}>
+              <i class="fas fa-envelope-square modal-icon"></i>
+            </a>
+          </Grid>
+          <Grid 
+            item 
+            md={4} 
+            sx={{
+              marginLeft: {
+                sm: '2%', 
+                md:'5%', 
+                lg:'8%', 
+                xl: '10%'
+              }}}
+          >
+            <a href='https://github.com/mikkrieg' className={classes.modalIcons} target='_blank' rel='noreferrer'>
+              <i className="fab fa-github-square modal-icon"></i>
+            </a>
+          </Grid>
+          <Grid 
+            item 
+            md={4} 
+            sx={{
+              marginLeft: {
+              sm: '2%', 
+              md:'5%', 
+              lg:'8%', 
+              xl: '10%'
+            }}}
+          >
+            <a href='https://www.linkedin.com/in/michael-kriegel/' className={classes.modalIcons} target='_blank' rel='noreferrer'>
+              <i className="fab fa-linkedin modal-icon"></i>
+            </a>
+          </Grid>
+        </Grid>
       </Box>
     </Fade>
   </Modal>
