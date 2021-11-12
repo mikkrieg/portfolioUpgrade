@@ -14,17 +14,18 @@ const Projects = () => {
       }}
       >
       <Grid 
-      sx={{ 
-        display: 'flex', 
-        flexDirection: {
-          xs: 'column', 
-          md: 'row'
-        }, 
-        alignItems: 'center', 
-        justifyContent: {
-          md: 'space-evenly'
-          }
-        }}
+        mt={-5}
+        sx={{ 
+          display: 'flex', 
+          flexDirection: {
+            xs: 'column', 
+            md: 'row'
+          }, 
+          alignItems: 'center', 
+          justifyContent: {
+            md: 'space-evenly'
+            }
+          }}
       >
         <Templix/>
         <HangMan/>

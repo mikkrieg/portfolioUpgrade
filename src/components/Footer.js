@@ -39,7 +39,7 @@ const Footer = () => {
             <i className="fab fa-linkedin footer-icon" id='foot-link'></i>
           </a>
           <a href='mailto:mikkrieg@gmail.com' className={classes.footerIcons}>
-            <i class="fas fa-envelope-square footer-icon" id='foot-mail'></i>
+            <i className="fas fa-envelope-square footer-icon" id='foot-mail'></i>
           </a>
         </Grid>
       </Grid>

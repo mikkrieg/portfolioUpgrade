@@ -27,11 +27,10 @@ const HangMan = () => {
   }, []);
 
   return (
-    <Grid mt={5}>
+    <Grid mt={{xs: 1, md: 5}}>
       <Grid 
         item
         sx={{ display: 'flex'}}
-        direction='row'
       >
         <Card 
           data-aos='fade-up'
@@ -46,7 +45,7 @@ const HangMan = () => {
           >
             <CardMedia
               component="img"
-              sx={{ height: {xs: '100px', md: '90px'}}}
+              sx={{ height: {xs: '80px', md: '90px'}}}
               image={hangmanIMG}
               alt="templix logo"
             />

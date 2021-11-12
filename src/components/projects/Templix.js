@@ -26,10 +26,7 @@ const Templix = () => {
   }, []);
 
   return (
-    <Grid 
-      mt={5}
-      direction='row'
-    >
+    <Grid mt={{ xs: -2, md: 5}}>
       <Grid 
         item
         sx={{ display: 'flex'}}
@@ -47,7 +44,7 @@ const Templix = () => {
           >
             <CardMedia
               component="img"
-              sx={{ height: {xs: '100px', md: '90px'}}}
+              sx={{ height: {xs: '80px', md: '90px'}}}
               image={templix}
               alt="templix logo"
             />
