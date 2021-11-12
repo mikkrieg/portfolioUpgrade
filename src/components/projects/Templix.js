@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import { CardActionArea } from '@mui/material';
-import LazyLoad from 'react-lazy-load';
 import Grid from '@mui/material/Grid';
 import templix from '../../img/templix.png';
 import Aos from 'aos';
@@ -32,7 +31,7 @@ const Templix = () => {
       direction='row'
     >
       <Grid 
-        ite8
+        item
         sx={{ display: 'flex'}}
       >
         <Card 
@@ -42,30 +41,28 @@ const Templix = () => {
           marginBottom: {xs: 3, md: 0},
           }}>
           <CardActionArea 
-          href='https://templix.netlify.app/'
-          target='_blank'
-          className={classes.cards}
+            href='https://templix.netlify.app/'
+            target='_blank'
+            className={classes.cards}
           >
-            <LazyLoad>
-              <CardMedia
-                component="img"
-                sx={{ height: {xs: '100px', md: '90px'}}}
-                image={templix}
-                alt="templix logo"
-              />
-            </LazyLoad>
+            <CardMedia
+              component="img"
+              sx={{ height: {xs: '100px', md: '90px'}}}
+              image={templix}
+              alt="templix logo"
+            />
             <CardContent>
               <Typography 
-              gutterBottom 
-              variant="h5" 
-              component="div"
+                gutterBottom 
+                variant="h5" 
+                component="div"
               >
                 Templix Capstone
               </Typography>
               <Typography 
-              variant="body2" 
-              color="text.secondary"
-              sx={{ fontSize: { md: '1.05em'}}}
+                variant="body2" 
+                color="text.secondary"
+                sx={{ fontSize: { md: '1.05em'}}}
               >
                 This is a project I constructed for my Epicodus Capstone project. It is a site that provides splash page templates for users to gain inspiration from or use themselves. Built with React, JSX Bootstrap-React and CSS/SCSS. 
               </Typography>

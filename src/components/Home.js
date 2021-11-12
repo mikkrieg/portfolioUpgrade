@@ -1,5 +1,4 @@
-import React, { useState, useContext } from 'react';
-import { AppContext } from '../AppContext';
+import React, { useState } from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
@@ -29,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
   const [hideArrow, setHideArrow] = useState(false);
-  const { open, setOpen } = useContext(AppContext);
 
   const classes = useStyles();
 
@@ -98,17 +96,21 @@ const Home = () => {
           </Grid>
         </Grid>
         <Grid 
-        item 
-        xs={1} 
-        mt={5} 
-        sx={{ display: { md: 'none'}}}
+          item 
+          xs={1} 
+          mt={5} 
+          sx={{ 
+            display: { 
+              md: 'none'
+            }
+          }}
         >
-            <img 
-            src={img} 
-            alt='down arrow' 
-            id='scroll-arrow' 
-            className={hideArrow ? 'hide-arrow' : 'reveal-arrow'}
-            />
+          <img 
+          src={img} 
+          alt='down arrow' 
+          id='scroll-arrow' 
+          className={hideArrow ? 'hide-arrow' : 'reveal-arrow'}
+          />
         </Grid>
       </Container>
       <DesktopModal/>

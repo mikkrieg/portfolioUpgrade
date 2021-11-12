@@ -20,7 +20,7 @@ const Footer = () => {
       <Grid 
       item 
       sx={{
-        marginTop: {md: 2}
+        marginTop: {md: 3}
       }}
       >
         <footer>&copy;2021 Michael Kriegel</footer>

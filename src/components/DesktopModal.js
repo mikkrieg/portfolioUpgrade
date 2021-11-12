@@ -1,18 +1,12 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import { makeStyles } from '@mui/styles';
-import FormControl from '@mui/material/FormControl';
 import Typography from '@mui/material/Typography';
-import InputLabel from '@mui/material/InputLabel'; 
-import Input from '@mui/material/Input';
-import FormHelperText from '@mui/material/FormHelperText';
-import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import { AppContext } from '../AppContext';
-import '../sass/components/DesktopModal.scss';
 
 const useStyles = makeStyles(theme => ({
   modalIcons: {
@@ -64,7 +58,14 @@ const DesktopModal = () => {
         boxShadow: 24,
         p: 4,
       }}>
-        <Typography id="transition-modal-title" variant="h2" sx={{ textAlign: 'center', fontWeight: 'bold' }}>
+        <Typography 
+          id="transition-modal-title" 
+          variant="h2" 
+          sx={{ 
+            textAlign: 'center', 
+            fontWeight: 'bold' 
+          }}
+        >
           Get in Touch
         </Typography>
         <Typography 
@@ -72,8 +73,9 @@ const DesktopModal = () => {
           sx={{ 
             textAlign: 'center', 
             width: '80%', 
-            margin: 'auto'}}
-          >
+            margin: 'auto'
+          }}
+        >
           Shoot me an email at mikkrieg@gmail.com or connect with me on these platforms
         </Typography>
         <Grid 

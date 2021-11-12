@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import Michael from '../img/me.jpeg';
-import LazyLoad from 'react-lazy-load';
 import '../sass/components/about.scss';
 
 
@@ -24,16 +23,14 @@ const About = () => {
         md={6} 
         sx={{
           width: '100%',
-          marginTop: {xs: 5, md: 10}
+          marginTop: {xs: 5, md: -4}
         }}
         >
-          <LazyLoad>
-            <img 
-            id='creator-image' 
-            src={Michael} 
-            alt='Michael sitting by a fire'
-            />
-          </LazyLoad>
+          <img 
+          id='creator-image' 
+          src={Michael} 
+          alt='Michael sitting by a fire'
+          />
         </Grid>
         <Grid 
         item 
@@ -86,7 +83,8 @@ const About = () => {
           mb={3}
           sx={{
             textAlign: { xs: 'center', md: 'left'},
-            fontSize: 18
+            fontSize: 18,
+            marginBottom: {xs: 'none', md: 20}
           }}
           >
             After graduating Epicodus I worked as a Front-End intern at <span><a href='https://www.grantusfunding.com/'> Grant Us Funding</a>.</span> Here I worked with React and Redux to create a multi-step form that streamlined the process of adding new funding opportunities to their application. 
