@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import { CardActionArea } from '@mui/material';
+import LazyLoad from 'react-lazy-load';
 import Grid from '@mui/material/Grid';
 import hangmanIMG from '../../img/hangman.png';
 import Aos from 'aos';
@@ -44,12 +45,14 @@ const HangMan = () => {
           target='_blank'
           className={classes.cards}
           >
-            <CardMedia
-              component="img"
-              sx={{ height: {xs: '100px', md: '90px'}}}
-              image={hangmanIMG}
-              alt="templix logo"
-            />
+            <LazyLoad>
+              <CardMedia
+                component="img"
+                sx={{ height: {xs: '100px', md: '90px'}}}
+                image={hangmanIMG}
+                alt="templix logo"
+              />
+            </LazyLoad>
             <CardContent>
               <Typography 
               gutterBottom 

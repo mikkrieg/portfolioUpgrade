@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import Michael from '../img/me.jpeg';
+import LazyLoad from 'react-lazy-load';
 import '../sass/components/about.scss';
 
 
@@ -26,11 +27,13 @@ const About = () => {
           marginTop: {xs: 5, md: 10}
         }}
         >
-          <img 
-          id='creator-image' 
-          src={Michael} 
-          alt='Michael sitting by a fire'
-          />
+          <LazyLoad>
+            <img 
+            id='creator-image' 
+            src={Michael} 
+            alt='Michael sitting by a fire'
+            />
+          </LazyLoad>
         </Grid>
         <Grid 
         item 
