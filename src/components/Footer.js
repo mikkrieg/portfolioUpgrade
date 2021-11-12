@@ -2,6 +2,7 @@ import React from 'react';
 import './../sass/components/footer.scss';
 import { makeStyles } from '@mui/styles';
 import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 const useStyles = makeStyles(theme => ({
   footerIcons: {
