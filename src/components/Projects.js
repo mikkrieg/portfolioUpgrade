@@ -13,7 +13,19 @@ const Projects = () => {
       backgroundColor: {xs: 'none'},
       }}
       >
-      <Grid>
+      <Grid 
+      sx={{ 
+        display: 'flex', 
+        flexDirection: {
+          xs: 'column', 
+          md: 'row'
+        }, 
+        alignItems: 'center', 
+        justifyContent: {
+          md: 'space-evenly'
+          }
+        }}
+      >
         <Templix/>
         <HangMan/>
       </Grid>

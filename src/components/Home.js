@@ -55,7 +55,7 @@ const Home = () => {
           <Grid 
           item 
           xs={12} 
-          sx={{ marginTop: {xs: 11, md: 12, xl: 20} }}
+          sx={{ marginTop: {xs: 11, md: 12, xl: 15} }}
           >
             <Typography variant='h2' align='center'>
               Michael Kriegel
@@ -82,7 +82,7 @@ const Home = () => {
                 marginTop: 2,
                 marginBottom: 1,
                 }}>
-              Scroll down to check out my projects or click here to learn more about me!
+              Check out my projects below or click here to learn more about me!
             </Typography>
           </Grid>
           <Grid item xs={12} align='center' mt={2}>

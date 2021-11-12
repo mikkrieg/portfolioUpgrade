@@ -23,11 +23,11 @@ const HangMan = () => {
   const classes = useStyles();
 
   useEffect(() => { 
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1500 });
   }, []);
 
   return (
-    <Grid mt={2}>
+    <Grid mt={5}>
       <Grid 
         item
         sx={{ display: 'flex'}}
@@ -37,7 +37,7 @@ const HangMan = () => {
         data-aos='fade-up'
         sx={{ 
           maxWidth: 345,  
-          marginBottom: {xs: 3}
+          marginBottom: {xs: 3, md: 0},
           }}>
           <CardActionArea 
           href='https://redux-hangman.netlify.app/'
@@ -46,7 +46,7 @@ const HangMan = () => {
           >
             <CardMedia
               component="img"
-              height="110"
+              sx={{ height: {xs: '100px', md: '90px'}}}
               image={hangmanIMG}
               alt="templix logo"
             />
@@ -61,6 +61,7 @@ const HangMan = () => {
               <Typography 
               variant="body2" 
               color="text.secondary"
+              sx={{ fontSize: { md: '1.05em'}}}
               >
                 This is a application is a slightly modified version of the classic hangman game that I built alongside a team of peers. Fully playable and hosted on Netlify. This project was built with React, Redux, Material UI and custom CSS. 
               </Typography>

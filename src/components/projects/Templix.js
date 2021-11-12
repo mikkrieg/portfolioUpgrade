@@ -22,7 +22,7 @@ const Templix = () => {
   const classes = useStyles();
 
   useEffect(() => { 
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1500 });
   }, []);
 
   return (
@@ -31,14 +31,14 @@ const Templix = () => {
       direction='row'
     >
       <Grid 
-        item
+        ite8
         sx={{ display: 'flex'}}
       >
         <Card 
         data-aos='fade-up'
         sx={{ 
           maxWidth: 345,  
-          marginBottom: {xs: 4}
+          marginBottom: {xs: 3, md: 0},
           }}>
           <CardActionArea 
           href='https://templix.netlify.app/'
@@ -47,7 +47,7 @@ const Templix = () => {
           >
             <CardMedia
               component="img"
-              height="90"
+              sx={{ height: {xs: '100px', md: '90px'}}}
               image={templix}
               alt="templix logo"
             />
@@ -62,6 +62,7 @@ const Templix = () => {
               <Typography 
               variant="body2" 
               color="text.secondary"
+              sx={{ fontSize: { md: '1.05em'}}}
               >
                 This is a project I constructed for my Epicodus Capstone project. It is a site that provides splash page templates for users to gain inspiration from or use themselves. Built with React, JSX Bootstrap-React and CSS/SCSS. 
               </Typography>
