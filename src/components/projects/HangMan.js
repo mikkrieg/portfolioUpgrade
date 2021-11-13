@@ -36,7 +36,7 @@ const HangMan = () => {
           data-aos='fade-up'
           sx={{ 
           maxWidth: 345,  
-          marginBottom: {xs: 3, md: 0},
+          marginBottom: {xs: 3, md: 4},
           }}>
           <CardActionArea 
             href='https://redux-hangman.netlify.app/'

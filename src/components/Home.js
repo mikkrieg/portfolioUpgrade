@@ -76,11 +76,11 @@ const Home = () => {
               align='center' 
               sx={{ 
                 display: {xs: 'none', sm: 'none', md: 'block'}, 
-                fontSize: 25, 
-                marginTop: 2,
+                fontSize: 23, 
+                marginTop: 4,
                 marginBottom: 1,
                 }}>
-              Check out my projects below or click here to learn more about me!
+              Check out my projects below or learn more about me!
             </Typography>
           </Grid>
           <Grid item xs={12} align='center' mt={2}>
