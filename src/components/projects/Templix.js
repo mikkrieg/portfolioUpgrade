@@ -35,7 +35,7 @@ const Templix = () => {
         data-aos='fade-up'
         sx={{ 
           maxWidth: 345,  
-          marginBottom: {xs: 3, md: 4},
+          marginBottom: {xs: 3, md: '6%'},
           }}>
           <CardActionArea 
             href='https://templix.netlify.app/'
@@ -61,7 +61,7 @@ const Templix = () => {
                 color="text.secondary"
                 sx={{ fontSize: { md: '1.05em'}}}
               >
-                This is a project I constructed for my Epicodus Capstone project. It is a site that provides splash page templates for users to gain inspiration from or use themselves. Built with React, JSX Bootstrap-React and CSS/SCSS. 
+                This is a project I constructed for my capstone at Epicodus Coding Boot Camp. It is a site that provides splash page templates for users to gain inspiration from or use themselves. Built with React, JSX Bootstrap-React and CSS/SCSS. 
               </Typography>
             </CardContent>
           </CardActionArea>

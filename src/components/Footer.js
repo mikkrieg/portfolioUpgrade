@@ -21,7 +21,7 @@ const Footer = () => {
       <Grid 
       item 
       sx={{
-        marginTop: {md: 3}
+        marginTop: {md: 5}
       }}
       >
         <footer>&copy;2021 Michael Kriegel</footer>
@@ -29,7 +29,6 @@ const Footer = () => {
         item
         sx={{
           display: 'flex',
-          
         }}
         >
           <a href='https://github.com/mikkrieg' className={classes.footerIcons}>

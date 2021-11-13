@@ -36,7 +36,7 @@ const HangMan = () => {
           data-aos='fade-up'
           sx={{ 
           maxWidth: 345,  
-          marginBottom: {xs: 3, md: 4},
+          marginBottom: {xs: 3, md: '6%'},
           }}>
           <CardActionArea 
             href='https://redux-hangman.netlify.app/'
@@ -66,7 +66,7 @@ const HangMan = () => {
                   }
                 }}
               >
-                This is a application is a slightly modified version of the classic hangman game that I built alongside a team of peers. Fully playable and hosted on Netlify. This project was built with React, Redux, Material UI and custom CSS. 
+                This application is a slightly modified version of the classic hangman game that I built alongside a team of three other peers. It is fully playable and hosted on Netlify. This project was built with React, Redux, Material UI and custom CSS. 
               </Typography>
             </CardContent>
           </CardActionArea>

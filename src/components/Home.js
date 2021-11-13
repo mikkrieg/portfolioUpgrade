@@ -53,7 +53,7 @@ const Home = () => {
           <Grid 
           item 
           xs={12} 
-          sx={{ marginTop: {xs: 11, md: 12, xl: 15} }}
+          sx={{ marginTop: {xs: 11, md: 12, xl: 10} }}
           >
             <Typography variant='h2' align='center'>
               Michael Kriegel
