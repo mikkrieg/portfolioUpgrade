@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
-import Container from 'react-bootstrap/Container';
 import About from './components/About';
 import { AppProvider } from './AppContext.js';
 import './sass/main.scss';
