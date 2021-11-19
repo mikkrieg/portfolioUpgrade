@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
@@ -26,13 +26,35 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const getWindowHeight = () => {
+  const { innerHeight: height } = window;
+  return {
+    height
+  };
+}
+
+const useWindowHeight = () => {
+  const [windowHeight, setWindowHeight] = useState(getWindowHeight());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowHeight(getWindowHeight());
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  },[])
+
+  return windowHeight;
+}
+
 const Home = () => {
   const [hideArrow, setHideArrow] = useState(false);
-
+  const { height } = useWindowHeight();
+  
   const classes = useStyles();
 
   const removeArrow = () => {
-    if(window.scrollY > 70) {
+    if(window.scrollY > 70 || height > 700) {
       setHideArrow(true);
     } else {
       setHideArrow(false);
@@ -40,6 +62,14 @@ const Home = () => {
   } 
 
   window.addEventListener('scroll', removeArrow);
+
+  useEffect(() => {
+    if(height > 700){
+      setHideArrow(true);
+    } else {
+      setHideArrow(false);
+    }
+  }, [height])
 
   return(
     <>

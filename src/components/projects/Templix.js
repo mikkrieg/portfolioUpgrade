@@ -26,7 +26,7 @@ const Templix = () => {
   }, []);
 
   return (
-    <Grid mt={{ xs: -2, md: 5}}>
+    <Grid mt={{ xs: 0, md: 5}}>
       <Grid 
         item
         sx={{ display: 'flex'}}
