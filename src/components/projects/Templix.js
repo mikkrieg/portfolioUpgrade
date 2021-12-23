@@ -38,10 +38,9 @@ const Templix = () => {
           marginBottom: {xs: 3, md: '6%'},
           }}>
           <CardActionArea 
-            href='https://templix.netlify.app/'
+            href='www.templix.mkriegel.me'
             target='_blank'
             className={classes.cards}
-            disabled
           >
             <CardMedia
               component="img"
