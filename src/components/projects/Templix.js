@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { makeStyles } from '@mui/styles'
+import { makeStyles } from '@mui/styles';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
@@ -41,6 +41,7 @@ const Templix = () => {
             href='https://templix.netlify.app/'
             target='_blank'
             className={classes.cards}
+            disabled
           >
             <CardMedia
               component="img"
