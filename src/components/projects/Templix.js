@@ -41,7 +41,6 @@ const Templix = () => {
             href='https://templix.netlify.app/'
             target='_blank'
             className={classes.cards}
-            disabled
           >
             <CardMedia
               component="img"
@@ -62,7 +61,7 @@ const Templix = () => {
                 color="text.secondary"
                 sx={{ fontSize: { md: '1.05em'}}}
               >
-                This is a project I constructed for my capstone at Epicodus Coding Boot Camp. It is a site that provides splash page templates for users to gain inspiration from or use themselves. Built with React, JSX Bootstrap-React and CSS/SCSS. It is currently being revamped and will be ready by Christmas
+                This is a project I constructed for my capstone at Epicodus Coding Boot Camp. It is a site that provides splash page templates for users to gain inspiration from or use themselves. Built with React, JSX Bootstrap-React and CSS/SCSS.
               </Typography>
             </CardContent>
           </CardActionArea>
