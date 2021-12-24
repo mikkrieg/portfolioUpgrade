@@ -38,7 +38,7 @@ const Templix = () => {
           marginBottom: {xs: 3, md: '6%'},
           }}>
           <CardActionArea 
-            href='www.templix.mkriegel.me'
+            href='https://templix.mkriegel.me/'
             target='_blank'
             className={classes.cards}
           >
